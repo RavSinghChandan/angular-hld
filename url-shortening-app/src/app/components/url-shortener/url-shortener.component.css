@@ -1,0 +1,157 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(145deg, #f6f9fc, #f1f3f6);
+  color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Container Styling */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 3rem;
+  color: #4c9f70;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Input Fields Styling */
+.url-input {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.url-input:focus {
+  outline: none;
+  border-color: #4c9f70;
+  box-shadow: 0 0 5px rgba(76, 159, 112, 0.5);
+}
+
+/* Button Styling */
+.shorten-btn {
+  background-color: #4c9f70;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shorten-btn:hover {
+  background-color: #3c7b5b;
+  transform: scale(1.05);
+}
+
+/* Shortened URL Styling */
+.shortened-url {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eef5e4;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.shortened-url:hover {
+  background-color: #d8e7c2;
+}
+
+.shortened-url a {
+  font-weight: bold;
+  color: #4c9f70;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.shortened-url a:hover {
+  color: #2e5b38;
+}
+
+/* Analytics Section Styling */
+.analytics {
+  margin-top: 30px;
+  background-color: #f1f1f1;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.analytics h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.analytics p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 8px 0;
+}
+
+.analytics strong {
+  color: #4c9f70;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .url-input {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .shorten-btn {
+    font-size: 1.1rem;
+  }
+
+  .analytics h2 {
+    font-size: 1.6rem;
+  }
+
+  .analytics p {
+    font-size: 1rem;
+  }
+}

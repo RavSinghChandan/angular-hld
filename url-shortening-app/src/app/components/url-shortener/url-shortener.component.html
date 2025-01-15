@@ -1,0 +1,38 @@
+<p>URL Shortener works!</p>
+<div class="container">
+  <h1>URL Shortener</h1>
+  
+  <!-- Input field for the original URL -->
+  <input
+    type="text"
+    [(ngModel)]="originalUrl"
+    placeholder="Enter long URL"
+    class="url-input"
+  />
+
+  <!-- Input field for the expiry date -->
+  <input
+    type="datetime-local"
+    [(ngModel)]="expiryDate"
+    placeholder="Set expiry date"
+    class="url-input"
+  />
+
+  <!-- Shorten URL button -->
+  <button (click)="onShortenUrl()" class="shorten-btn">Shorten URL</button>
+
+  <!-- Display shortened URL -->
+  <div *ngIf="shortenedUrl" class="shortened-url">
+    <p><strong>Shortened URL:</strong> <a [href]="shortenedUrl" target="_blank">{{ shortenedUrl }}</a></p>
+  </div>
+
+  <!-- Display analytics data -->
+  <div *ngIf="analytics" class="analytics">
+    <h2>Analytics</h2>
+    <p><strong>Clicks:</strong> {{ analytics.clicks }}</p>
+    <p><strong>Original URL:</strong> {{ analytics.originalUrl }}</p>
+    <p><strong>Shortened URL:</strong> {{ analytics.shortUrl }}</p>
+    <!-- <p><strong>Creation Date:</strong> {{ analytics.creationDate | date: 'medium' }}</p>
+    <p><strong>Expiry Date:</strong> {{ analytics.expiryDate | date: 'medium' }}</p> -->
+  </div>
+</div>
